@@ -1,0 +1,6 @@
+[03-Mar-2024 20:23:45 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home1/gsftec05/public_html/cadastro/conect.php:5
+Stack trace:
+#0 /home1/gsftec05/public_html/cadastro/conect.php(5): PDO->__construct('mysql: host=loc...', 'root', Object(SensitiveParameterValue))
+#1 /home1/gsftec05/public_html/cadastro/cad.php(2): include('/home1/gsftec05...')
+#2 {main}
+  thrown in /home1/gsftec05/public_html/cadastro/conect.php on line 5
