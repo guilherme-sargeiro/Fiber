@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 02-Mar-2024 às 20:56
+-- Tempo de geração: 09-Mar-2024 às 15:52
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 7.4.29
 
@@ -46,6 +46,32 @@ CREATE TABLE `cadastros` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Extraindo dados da tabela `cadastros`
+--
+
+INSERT INTO `cadastros` (`id`, `nome`, `nascimento`, `CPF`, `identidade`, `email`, `endereco`, `referencia`, `cep`, `telefone`, `planos`, `vencimento`, `pagamento`, `indicacao`, `id_func`) VALUES
+(14, 'zé', '10', '12', '12', 'as@we', 'dw', 'gh', '51', '21', 'PLANO GLOBOPLAY-400MB', '20', 'CARTÃO', 'LOJA FILIAL', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `users`
+--
+
+CREATE TABLE `users` (
+  `id_func` int(11) NOT NULL,
+  `user` varchar(50) DEFAULT NULL,
+  `pass` varchar(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `users`
+--
+
+INSERT INTO `users` (`id_func`, `user`, `pass`) VALUES
+(1, 'gui', '12345678910');
+
+--
 -- Índices para tabelas despejadas
 --
 
@@ -56,6 +82,12 @@ ALTER TABLE `cadastros`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id_func`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -63,7 +95,13 @@ ALTER TABLE `cadastros`
 -- AUTO_INCREMENT de tabela `cadastros`
 --
 ALTER TABLE `cadastros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT de tabela `users`
+--
+ALTER TABLE `users`
+  MODIFY `id_func` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
